@@ -1,20 +1,20 @@
 FROM python:3.7
 
-RUN mkdir /staticsiteflask3
-WORKDIR /staticsiteflask3
+RUN mkdir /staticsiteflask4
+WORKDIR /staticsiteflask4
 
-COPY model /staticsiteflask3/model
-COPY static /staticsiteflask3/static
-COPY templates /staticsiteflask3/templates
-COPY Dockerfile /staticsiteflask3
-COPY extract_frames_from_video.py /staticsiteflask3
-COPY invetigate_RF.py /staticsiteflask3
-COPY requirements.txt /staticsiteflask3
-COPY run.py /staticsiteflask3
-COPY table.py /staticsiteflask3
-COPY usersDb.db /staticsiteflask3
+COPY model /staticsiteflask4/model
+COPY static /staticsiteflask4/static
+COPY templates /staticsiteflask4/templates
+COPY Dockerfile /staticsiteflask4
+COPY extract_frames_from_video.py /staticsiteflask4
+COPY invetigate_RF.py /staticsiteflask4
+COPY requirements.txt /staticsiteflask4
+COPY run.py /staticsiteflask4
+COPY table.py /staticsiteflask4
+COPY usersDb.db /staticsiteflask4
 
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
-CMD ["python", "/staticsiteflask3/run.py"]
+CMD ["python", "/staticsiteflask4/run.py"]
